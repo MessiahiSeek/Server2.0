@@ -2,12 +2,19 @@ from flask import Flask, request
 import time
 import sys
 import base64
+import subprocess
+
+print("checking for weight file")
+subprocess.call("./installWeights.sh",shell=True)
+print("Done Checking")
+
+
 
 # sys.path.insert(1, '/ImageHandler/')
-# from yolo_opencv import objectDetect
+from yolo_opencv import objectDetect
 
 # Create instance of class containing object detection methods
-# image = objectDetect()
+image = objectDetect()
 
 app = Flask(__name__)
 

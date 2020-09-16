@@ -3,11 +3,11 @@ import time
 import sys
 import base64
 
-#sys.path.insert(0, './ImageHandler/')
-#from yolo_opencv import objectDetect
+sys.path.insert(1, '/ImageHandler/')
+from yolo_opencv import objectDetect
 
-#Create instance of class containing object detection methods
-#image = objectDetect()
+# Create instance of class containing object detection methods
+image = objectDetect()
 
 app = Flask(__name__)
 
